@@ -1,0 +1,75 @@
+
+    <!-- <button type="button" class="choose-link" data-toggle="modal" data-target=".">Forgot
+    							Password ?</button>
+    						&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    						<button type="button" class="choose-link" data-toggle="modal"
+    							data-target=".register-modal">Sign Up</button> -->
+                                
+    <!-- <div class="modal fade register-modal" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    	aria-hidden="true">
+    	<div class="modal-dialog modal-xl">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<h4 class="modal-title w-100" id="myModalLabel">Sign Up</h4>
+    				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    				</button>
+    			</div>
+    			<div class="modal-body">
+    				
+    			</div>
+    			<div class="modal-footer">
+    				<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i>&nbsp;Sign Up</button>
+    				<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fas fa-times"></i>&nbsp;Cancel</button>
+    			</div>
+    		</div>
+    	</div>
+    </div> -->
+    <!-- <div class="text-center py-1">© 2019 WaSIJA. SMKN 2 Klaten.</div> -->
+    <!-- <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Footer Content</h5>
+                    <p>
+                        Here you can use rows and columns to organize your footer content.
+                    </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3" />
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> -->

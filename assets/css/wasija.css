@@ -1,0 +1,17 @@
+body {
+    background-color: #01579b;
+}
+
+.login-box {
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    width:100%;
+}
+
+.front-logo {
+    width:90px;
+    height:90px;
+    cursor: pointer;
+}
