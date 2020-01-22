@@ -51,6 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'C_home';
 
+$route['Start_With'] = 'C_home';
+$route['Start_With/(:any)'] = 'C_home/$1';
+$route['Start_With/(:any)/(:any)'] = 'C_home/$1/$2';
+
+
 $route['Teacher'] = 'Teacher/C_dashboard';
 $route['Teacher/(:any)'] = 'Teacher/C_dashboard/$1';
 $route['Teacher/(:any)/(:any)'] = 'Teacher/C_dashboard/$1/$2';
@@ -60,9 +65,6 @@ $route['Student'] = 'Student/C_dashboard';
 $route['Student/(:any)'] = 'Student/C_dashboard/$1';
 $route['Student/(:any)/(:any)'] = 'Student/C_dashboard/$1/$2';
 $route['Student/(:any)/(:any)/(:any)'] = 'Student/C_dashboard/$1/$2/$3';
-
-$route['login']['GET'] = '';
-$route['login']['POST'] = '';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

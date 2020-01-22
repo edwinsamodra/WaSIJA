@@ -1,0 +1,25 @@
+body {
+    background-color: #343a40;
+}
+
+.login-box {
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    width:100%;
+}
+
+.front-logo {
+    width:90px;
+    height:90px;
+    cursor: pointer;
+}
+
+.name-coloring {
+    color : #d0d4db;
+}
+
+.ui-datepicker {
+    z-index:1151 !important;
+}

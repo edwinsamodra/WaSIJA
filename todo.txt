@@ -1,3 +1,0 @@
-- controller benerin hehe
-- custom warna dalam (light blue)
-- modal about, modal belum punya akun
