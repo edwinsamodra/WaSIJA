@@ -1,5 +1,5 @@
-## WarehouseSIJA
-WarehouseSIJA is a web-based application that functions to manage tools in the SIJA office of SMK N 2 Klaten.
+## WASIJA
+WASIJA is a web-based application that functions to manage tools in the SIJA office of SMK N 2 Klaten.
 
 ### How to Clone
 1. Open the directory that you want
