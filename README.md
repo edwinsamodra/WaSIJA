@@ -5,7 +5,7 @@ WarehouseSIJA is a web-based application that functions to manage tools in the S
 1. Open the directory that you want
 2. Then, open git bash and type
 ```bash
-git clone https://github.com/edwinsamodra/WarehouseSIJA.git
+git clone https://github.com/edwinsamodra/WaSIJA.git
 ```
 3. Wait until loading is complete
 
