@@ -2,8 +2,8 @@
 
 			<a href="<?= base_url("Teacher") ?>" class="brand-link">
 				<div class="text-center">
-					<img src="<?= base_url("assets/img/not-logo1.png") ?>" alt="WaSIJA Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
-					<span class="brand-text font-bold">WaSIJA</span>
+					<img src="<?= base_url("assets/img/not-logo1.png") ?>" alt="WASIJA Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+					<span class="brand-text font-bold">WASIJA</span>
 				</div>
 			</a>
 
@@ -23,41 +23,40 @@
 					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 						<li class="nav-header">MENU</li>
 						<li class="nav-item has-treeview">
-							<a href="<?= base_url('Teacher/DataAlat')?>" class="nav-link">
+							<a href="#" class="nav-link">
 								<i class="nav-icon fas fa-wrench"></i>
 								<p>
-									Data Alat
-									<!-- <span class="right badge badge-danger">New</span> -->
+									Data Barang
 									<i class="right fas fa-angle-left"></i>
 								</p>
 							</a>
 							<ul class="nav nav-treeview" style="display: none;">
 								<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="<?= base_url('Teacher/InsertAlat')?>" class="nav-link">
 									<i class="far fa-circle nav-icon"></i>
-									<p>Insert Alat</p>
+									<p>Insert Barang</p>
 								</a>
 								</li>
 								<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="<?= base_url('Teacher/BarangDatang')?>" class="nav-link">
 									<i class="far fa-circle nav-icon"></i>
 									<p>Barang Datang</p>
 								</a>
 								</li>
 								<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="<?= base_url('Teacher/BarangHabisPakai')?>" class="nav-link">
 									<i class="far fa-circle nav-icon"></i>
 									<p>Barang Habis Pakai</p>
 								</a>
 								</li>
 								<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="<?= base_url('Teacher/InventarisBarang')?>" class="nav-link">
 									<i class="far fa-circle nav-icon"></i>
 									<p>Inventaris Barang</p>
 								</a>
 								</li>
 								<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="<?= base_url('Teacher/InventarisRuangan')?>" class="nav-link">
 									<i class="far fa-circle nav-icon"></i>
 									<p>Inventaris Ruangan</p>
 								</a>
@@ -78,15 +77,6 @@
 								<i class="nav-icon fas fa-user"></i>
 								<p>
 									Data Siswa
-									<span class="right badge badge-danger">New</span>
-								</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Teacher/DataSiswa')?>" class="nav-link">
-								<i class="nav-icon fas fa-wrench"></i>
-								<p>
-									Setting
 									<span class="right badge badge-danger">New</span>
 								</p>
 							</a>
@@ -114,7 +104,7 @@
 								<div class="inner">
 									<h3>1</h3>
 
-									<p>Data Alat</p>
+									<p>Data Barang</p>
 								</div>
 								<div class="icon">
 									<i class="fas fa-wrench"></i>

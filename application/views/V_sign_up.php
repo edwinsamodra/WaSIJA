@@ -29,7 +29,7 @@
     			<div class="col-md-4"></div>
     			<div class="col-md-4 login-box z-depth-5 rounded mb-50">
     				<div class="px-4 py-4">
-    					<center><a href="#AboutWaSIJA" id="btnMdlAbout" class="view zoom"><img class="front-logo" src="<?= base_url("assets/img/logo2.png") ?>"></a></center>
+    					<center><a href="#AboutWASIJA" id="btnMdlAbout" class="view zoom"><img class="front-logo" src="<?= base_url("assets/img/logo2.png") ?>"></a></center>
                         <form autocomplete="off" class="form-horizontal" action="<?= base_url('Start_With/saveAccount');?>" method="post">
                             <span style="font-size: 12px; color: red;">(*) Masukkan No Induk tanpa titik (.)<br />
                             (*) No Induk dipakai untuk Username <br />

@@ -9,21 +9,21 @@ class C_dashboard extends CI_Controller {
 	}
 	
 	public function index() {
-		$data['title'] = "WaSIJA";
+		$data['title'] = "WASIJA";
 		$this->load->view('V_header', $data);
 		$this->load->view('Student/V_dashboard');
 		$this->load->view('V_footer');
 	}
 
 	public function PinjamBarang() {
-		$data['title'] = "WaSIJA - Pinjam";
+		$data['title'] = "WASIJA - Pinjam";
 		$this->load->view('V_header', $data);
 		$this->load->view('Student/V_borrow');
 		$this->load->view('V_footer');
 	}
 	
 	public function DataPeminjaman() {
-		$data['title'] = "WaSIJA - Data Peminjaman";
+		$data['title'] = "WASIJA - Data Peminjaman";
 		$this->load->view('V_header', $data);
 		$this->load->view('Student/V_history');
 		$this->load->view('V_footer');

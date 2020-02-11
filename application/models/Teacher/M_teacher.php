@@ -13,4 +13,10 @@ class M_teacher extends CI_Model {
 		$sql = "SELECT * FROM ta.tlogin";
 		return $this->db->query($sql)->result_array();
 	}
+
+	public function getBarang($wer)
+	{
+		$sql = "SELECT * from taccount.tdata_barang $wer";
+		return $this->db->query($sql)->result_array();
+	}
 }

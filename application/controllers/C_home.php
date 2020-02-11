@@ -13,7 +13,30 @@ class C_home extends CI_Controller {
 	}
 
 	public function index() {
-		$data['title'] = "WaSIJA";
+		// require_once 'C:\xampp\htdocs\WASIJA\assets\PHPExcel-1.8\PHPExcel.php';
+		// $excel = new PHPExcel();
+		// // Settingan awal fil excel
+		// $excel->getProperties()->setCreator('My Notes Code')
+        //          ->setLastModifiedBy('My Notes Code')
+        //          ->setTitle("Data Siswa")
+        //          ->setSubject("Siswa")
+        //          ->setDescription("Laporan Semua Data Siswa")
+		// 		 ->setKeywords("Data Siswa");
+				 
+		// $excel->setActiveSheetIndex(0)->setCellValue('A3', "NO"); // Set kolom A3 dengan tulisan "NO"
+		// $excel->setActiveSheetIndex(0)->setCellValue('B3', "NIS"); // Set kolom B3 dengan tulisan "NIS"
+		// $excel->setActiveSheetIndex(0)->setCellValue('C3', "NAMA"); // Set kolom C3 dengan tulisan "NAMA"
+		// $excel->setActiveSheetIndex(0)->setCellValue('D3', "JENIS KELAMIN"); // Set kolom D3 dengan tulisan "JENIS KELAMIN"
+		// $excel->setActiveSheetIndex(0)->setCellValue('E3', "ALAMAT"); // Set kolom E3 dengan tulisan "ALAMAT"
+		// $excel->getActiveSheet(0)->setTitle("Laporan Data Siswa");
+		// $excel->setActiveSheetIndex(0);
+		// // Proses file excel
+		// header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		// header('Content-Disposition: attachment; filename="Data Siswa.xlsx"'); // Set nama file excel nya
+		// header('Cache-Control: max-age=0');
+		// $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
+		// $write->save('php://output');
+		$data['title'] = "WASIJA";
 		$this->load->view('V_home', $data);
 	}
 
@@ -47,7 +70,7 @@ class C_home extends CI_Controller {
 		$autentikasi = $this->M_home->cekLogin($username, $pass_encrypt);
 
 		if (empty($autentikasi)) {
-			$data['title'] = "WaSIJA";
+			$data['title'] = "WASIJA";
 			$this->load->view('V_home', $data);
 
 			echo '<center>';
@@ -66,7 +89,7 @@ class C_home extends CI_Controller {
 
 	public function Sign_Up()
 	{
-		$data['title'] = "WaSIJA - Sign Up";
+		$data['title'] = "WASIJA - Sign Up";
 		$this->load->view('V_sign_up', $data);
 	}
 
@@ -99,7 +122,7 @@ class C_home extends CI_Controller {
 
 	public function Forgot_Password()
 	{
-		$data['title'] = "WaSIJA - Forgot Password";
+		$data['title'] = "WASIJA - Forgot Password";
 		$this->load->view('V_forgot_password', $data);
 	}
 
@@ -111,7 +134,7 @@ class C_home extends CI_Controller {
 		$autentikasi = $this->M_home->searchAccount($newAccount);
 
 		if (empty($autentikasi)) {
-			$data['title'] = "WaSIJA";
+			$data['title'] = "WASIJA";
 			$this->load->view('V_forgot_password', $data);
 
 			echo '<center>';
@@ -130,7 +153,7 @@ class C_home extends CI_Controller {
 	}
 	public function Page_New_Password()
 	{
-		$data['title'] = "WaSIJA - Forgot Password";
+		$data['title'] = "WASIJA - Forgot Password";
 		$this->load->view('V_new_password', $data);
 	}
 

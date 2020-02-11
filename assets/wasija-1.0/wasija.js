@@ -1,4 +1,4 @@
-$baseurl = "http://localhost/WaSIJA";
+let baseurl = "http://localhost/WASIJA";
 
 //Depan
 
@@ -7,11 +7,11 @@ $('#btnMdlAbout').click(function() {
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">WaSIJA</h5>
+                        <h5 class="modal-title">WASIJA</h5>
                     </div>
                     <div class="modal-body">
-                        <div class="text-center"><img class="view zoom" style="width: 130px" src="assets/img/logo2.png" alt="Logo WaSIJA"></div>
-                        <b>WaSIJA</b> adalah aplikasi yang digunakan untuk blah blah blah. (Information of WaSIJA )
+                        <div class="text-center"><img class="view zoom" style="width: 130px" src="assets/img/logo2.png" alt="Logo WASIJA"></div>
+                        <b>WASIJA</b> adalah aplikasi yang digunakan untuk blah blah blah. (Information of WASIJA )
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i>&nbsp;Close</button>
@@ -113,12 +113,43 @@ $('#deleteDup').click(function() {
     }
 })
 
+
 $(function () {
-    $('#datepicker').datepicker({
+    $('#datepickerAfter').datepicker({
         dateFormat: 'dd-mm-yy',
         minDate: 0
     });
-    $('#table-pinjam').DataTable({
+    $('#datepicker').datepicker({
+        dateFormat: 'dd-mm-yy'
+    });
+    $('#tablePeminjaman').DataTable({
+        buttons: 'Bfrtip'
+    });
+    $('#tableToolsCome').DataTable({
+        buttons: 'Bfrtip',
+        "scrollX": true
+    });
+    $('#tableToolsCanEmpty').DataTable({
+        buttons: 'Bfrtip',
+        "scrollX": true
+    });
+    $('#tableToolsInventarization').DataTable({
+        buttons: 'Bfrtip',
+        "scrollX": true
+    });
+    $('#alat-rj1').DataTable({
+        buttons: 'Bfrtip'
+    });
+    $('#alat-rj2').DataTable({
+        buttons: 'Bfrtip'
+    });
+    $('#alat-rja1').DataTable({
+        buttons: 'Bfrtip'
+    });
+    $('#alat-rja2').DataTable({
+        buttons: 'Bfrtip'
+    });
+    $('#tableStudent').DataTable({
         buttons: 'Bfrtip'
     });
 })
@@ -131,18 +162,96 @@ $('#expandAlat').click(function () {
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-dark">
-                        <h5 class="modal-title">Data Alat</h5>
+                        <h5 class="modal-title">Data Barang</h5>
                     </div>
                     <div class="modal-body">
                         <center>
-                            <a href="#"> Insert Alat </a> <hr>
-                            <a href="#"> Barang Datang </a> <hr>
-                            <a href="#"> Barang Habis Pakai </a> <hr>
-                            <a href="#"> Inventaris Barang </a> <hr>
-                            <a href="#"> Inventaris Ruangan </a>
+                            <a href="`+ baseurl + "/Teacher/InsertAlat" +`"> Insert Data Barang </a> <hr>
+                            <a href="`+ baseurl + "/Teacher/BarangDatang" +`"> Barang Datang </a> <hr>
+                            <a href="`+ baseurl + "/Teacher/BarangHabisPakai" +`"> Barang Habis Pakai </a> <hr>
+                            <a href="`+ baseurl + "/Teacher/InventarisBarang" +`"> Inventaris Barang </a> <hr>
+                            <a href="`+ baseurl + "/Teacher/InventarisRuangan" +`"> Inventaris Ruangan </a>
                         </center>
                     </div>
                 </div>
             </div>
         </div>`).modal('show');
-})
+});
+
+$('#btnUpdateTools').click(function () {
+    $(`<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h5 class="modal-title">Update Data</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" value="Name"/><br />
+                                <input class="form-control" type="text" value="Spesifikasi"/><br />
+                                <input class="form-control" type="text" value="Harga"/><br />
+                                <input class="form-control" type="text" value="Dari"/><br />
+                                <center>
+                                    <button class="btn-primary btn-sm"><i class="fa fa-paper-plane"></i>&nbsp;Update</button>
+                                    <button class="btn-danger btn-sm"><i class="fa fa-trash"></i>&nbsp;Delete</button>
+                                </center>
+                            </div>
+                            <div class="col-lg-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`).modal('show');
+});
+
+$('#mdlDetailStudent').click(function () {
+    $(`<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h5 class="modal-title">Update Data Siswa</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" value="2020"/><br />
+                                <center>
+                                    <button class="btn-primary btn-sm"><i class="fa fa-paper-plane"></i>&nbsp;Update</button>
+                                    <button class="btn-danger btn-sm"><i class="fa fa-trash"></i>&nbsp;Delete</button>
+                                </center>
+                            </div>
+                            <div class="col-lg-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`).modal('show');
+});
+
+$('#btnABStudent').click(function () {
+    $(`<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h5 class="modal-title">Update Data Siswa</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" placeholder="Approval"/><br />
+                                <center>
+                                    <button class="btn-primary btn-sm"><i class="fa fa-minus"></i>&nbsp;Kembalikan</button>
+                                    <button class="btn-danger btn-sm"><i class="fa fa-plus"></i>&nbsp;Perpanjang</button>
+                                </center>
+                            </div>
+                            <div class="col-lg-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`).modal('show');
+});

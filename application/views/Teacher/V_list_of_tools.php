@@ -1,8 +1,8 @@
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<a href="<?= base_url('Teacher') ?>" class="brand-link">
 				<div class="text-center">
-					<img src="<?= base_url('assets/img/not-logo1.png') ?>" alt="WaSIJA Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
-					<span class="brand-text font-bold">WaSIJA</span>
+					<img src="<?= base_url('assets/img/not-logo1.png') ?>" alt="WASIJA Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+					<span class="brand-text font-bold">WASIJA</span>
 				</div>
 			</a>
 			<div class="sidebar">

@@ -2,7 +2,7 @@
 
 			<a href="<?= base_url("Student") ?>" class="brand-link">
 				<div class="text-center">
-					<img src="<?= base_url("assets/img/not-logo1.png") ?>" alt="WaSIJA Logo"
+					<img src="<?= base_url("assets/img/not-logo1.png") ?>" alt="WASIJA Logo"
 						class="brand-image img-circle elevation-3" style="opacity: 0.8" />
 					<span class="brand-text font-bold">WASIJA</span>
 				</div>
@@ -62,27 +62,27 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-12">
-							<table id="table-pinjam" class="display datatable table table-hover">
+							<table id="tablePeminjaman" class="display datatable table table-hover">
 								<thead class="bg-dark">
 									<tr>
-										<th>No</th>
-										<th class="text-center">Nama Alat</th>
+										<th class="text-center">No</th>
+										<th class="text-center">Nama Barang</th>
+										<th class="text-center">Spesifikasi</th>
 										<th class="text-center">Jumlah</th>
 										<th class="text-center">Tanggal Kembali</th>
 										<th class="text-center">Approval Pinjam</th>
-										<th class="text-center">Action</th>
+										<th class="text-center">AB</th>
 									</tr>
 								</thead>
 								<tbody class="bg-light">
 									<tr>
-										<td>1</td>
-										<td>Row 1 Data 1</td>
-										<td>Row 1 Data 1</td>
-										<td>Row 1 Data 2</td>
-										<td>Row 1 Data 2</td>
-										<td class="text-center"> <button type="button" class="btn btn-primary btn-sm"
-												data-toggle="modal" data-target="#detailModal"><i
-													class="fa fa-search-plus"></i>&nbsp; Detail</button> </td>
+										<td class="text-center">1</td>
+										<td>Router MikroTik</td>
+										<td>RB950</td>
+										<td class="text-center">1</td>
+										<td>30-02-2020</td>
+										<td>Pak Antok</td>
+										<td class="text-center"> <button type="button" id="btnABStudent" class="btn-primary btn-sm"><i class="fa fa-paper-plane"></i></button> </td>
 									</tr>
 								</tbody>
 							</table>

@@ -2,7 +2,7 @@
 
 			<a href="<?= base_url("Student") ?>" class="brand-link">
 				<div class="text-center">
-					<img src="<?= base_url("assets/img/not-logo1.png") ?>" alt="WaSIJA Logo"
+					<img src="<?= base_url("assets/img/not-logo1.png") ?>" alt="WASIJA Logo"
 						class="brand-image img-circle elevation-3" style="opacity: 0.8" />
 					<span class="brand-text font-bold">WASIJA</span>
 				</div>
@@ -106,7 +106,7 @@
 											<div class="input-group-prepend">
 												<span class="input-group-text"><i class="fa fa-calendar"></i></span>
 											</div>
-											<input type="text" name="tanggal_kembali" required class="form-control" class="datepicker" id="datepicker"
+											<input type="text" name="tanggal_kembali" required class="form-control" class="datepicker" id="datepickerAfter"
 												placeholder="Pilih Tanggal Kembali">
 										</div>
 										<label for="aproval">Approve By</label>
