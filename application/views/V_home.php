@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= base_url("assets/wasija-1.0/wasija.css") ?>">
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/datepicker/css/datepicker.css') ?>" />
     <!-- Ionicons -->
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
@@ -44,7 +45,8 @@
                             <center>
                                 <button class="btn btn-primary waves-effect" id="btn_submit"><i class="fas fa-sign-in-alt mr-1"></i>&nbsp;Sign In</button><br />
                                 <span class="text-gray">- or -</span><br />
-                                <a href="<?= base_url('Start_With/Sign_Up')?>">Sign Up</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="<?= base_url('Start_With/Forgot_Password')?>"> Forgot Password ?</a>
+                                <a href="<?= base_url('Start_With/Sign_Up')?>">Sign Up</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+                                <a href="#myModal" data-toggle="modal"> Forgot Password ?</a>
                             </center>
                         </form>
     				</div>
@@ -68,5 +70,20 @@
     <script type="text/javascript">
         $(function () { $('#username').focus(); })
     </script>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel" align="center">Anda Lupa Password</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+			<div class="modal-body"> Jika Anda lupa password, <br>silahkan menghubungi Administrator (Mas Anto)<br>Whatsapp ke -.</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
