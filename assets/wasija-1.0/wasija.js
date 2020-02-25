@@ -1,4 +1,6 @@
-let baseurl = "http://localhost/WASIJA";
+// let baseurl = "http://localhost/WASIJA";
+let baseurl = "http://192.168.168.188/WASIJA";
+let loading_lama = baseurl + '/assets/img/eyeglass_loader.gif';
 
 //Depan
 
@@ -28,7 +30,7 @@ $(function(){
         let two = $(this).val()
 
         if (one == two) {
-            if (one.length >= 8) {
+            if (one.length >= 6) {
                 $('#addicon').removeClass('fas fa-times prefix');
                 $('#addicon').addClass('fas fa-check prefix');
                 $('#addicon').css('color' , 'green')
@@ -47,7 +49,7 @@ $(function(){
         let two = $(this).val()
 
         if (one == two) {
-            if (one.length >= 8) {
+            if (one.length >= 6) {
                 $('#addicon').removeClass('fas fa-times prefix');
                 $('#addicon').addClass('fas fa-check prefix');
                 $('#addicon').css('color' , 'green')
@@ -206,30 +208,101 @@ $('#btnUpdateTools').click(function () {
         </div>`).modal('show');
 });
 
-$('#mdlDetailStudent').click(function () {
-    $(`<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header bg-dark">
-                        <h5 class="modal-title">Update Data Siswa</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-1"></div>
-                            <div class="col-lg-10">
-                                <input class="form-control" type="text" value="2020"/><br />
-                                <center>
-                                    <button class="btn-primary btn-sm"><i class="fa fa-paper-plane"></i>&nbsp;Update</button>
-                                    <button class="btn-danger btn-sm"><i class="fa fa-trash"></i>&nbsp;Delete</button>
-                                </center>
-                            </div>
-                            <div class="col-lg-1"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>`).modal('show');
+$('.mdlDetailStudent').on('click', function () {
+    let id = $(this).val()
+    $.ajax({
+        type: 'post',
+        data: {
+            id: id
+        },
+        dataType: 'json',
+        url: baseurl+'/Teacher/show-akun',
+        success: function (data) {
+            $('#TC_id').val(data[2])
+            $('#TC_name').val(data[0]['nama'])
+            $('#TC_username').val(data[0]['username']).addClass('disabled', true)
+            $('#TC_pwd').val(data[1])
+            $('#TC_status').val(function () {
+                if (data[0]['kode'] == '1') {
+                    return 'Admin'
+                }else if (data[0]['kode'] == '2') {
+                    return 'Guru'
+                }else {
+                    return 'Siswa'
+                }
+            })
+            $('#TC_Kelas').val(data[0]['kelas'])
+            $('#TC_email').val(data[0]['email'])
+            $('#TC_Create').val(data[0]['created_date']).addClass('disabled', true)
+            $('#TC_LastDate').val(function () {
+                return (data[0]['last_update'] == '0000-00-00 00:00:00') ? '-': data[0]['last_update']
+            }).addClass('disabled', true)
+            $(`#modal_account`).modal('show')
+        }
+    })
 });
+
+$('#TC_UpdateAkun').on('click', function () {
+    let id      = $('#TC_id').val()
+    let nama    = $('#TC_name').val()
+    let user    = $('#TC_username').val()
+    let pwd     = $('#TC_pwd').val()
+    let sts     = $('#TC_status').val()
+    let kls     = $('#TC_Kelas').val()
+    let email   = $('#TC_email').val()
+
+    swal.fire({
+        title: 'Peringatan',
+        text: 'Apakah Anda yakin ingin mengupdate Akun ?',
+        type: 'warning',
+        allowOutsideClick: false,
+        showCancelButton: true
+    }).then(result =>{
+        if(result.value){
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: id,
+                    nama: nama,
+                    password: pwd,
+                    status: sts,
+                    kelas: kls,
+                    email: email
+                },
+                beforeSend: function () {
+                    swal.fire({
+                        html: `<img style="margin-left: -40px" src=`+loading_lama+`>`,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        allowOutsideClick: false
+                    })
+                },
+                url: baseurl + '/Teacher/update',
+                // dataType: 'json',
+                success: function (data) {
+                    swal.close()
+                    if (data == 'sama') {
+                        swal.fire({
+                            title: 'Peringatan',
+                            text: 'Tidak ada data yang diupdate !',
+                            type: 'warning',
+                            allowOutsideClick: false
+                        })
+                    }else {
+                        swal.fire({
+                            title: 'Success',
+                            text: 'Data ID '+data+' berhasil di update !',
+                            type: 'success',
+                            allowOutsideClick: false
+                        }).then(result=>{
+                            window.location.reload()
+                        })
+                    }
+                }
+            })
+        }
+    })
+})
 
 $('#btnABStudent').click(function () {
     $(`<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
