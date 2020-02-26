@@ -119,6 +119,7 @@ class C_home extends CI_Controller {
 			'kode'		=> '3'
 		);
 		$this->M_home->insertNewAccount($newAccount);
+    $status_code = $this->input->post('status_code');
 		if ($status_code == 0) {
 			redirect(base_url());
 		} else if ($status_code == 1) {
