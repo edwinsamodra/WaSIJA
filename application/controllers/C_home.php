@@ -119,7 +119,12 @@ class C_home extends CI_Controller {
 			'kode'		=> '3'
 		);
 		$this->M_home->insertNewAccount($newAccount);
-		redirect(base_url());
+		$status_code = $this->input->post('status_code');
+		if ($status_code == 0) {
+			redirect(base_url());
+		} else if ($status_code == 1) {
+			redirect(base_url("Teacher/DataSiswa"));
+		}
 	}
 
 	public function Forgot_Password()

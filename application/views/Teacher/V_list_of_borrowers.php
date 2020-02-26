@@ -12,9 +12,9 @@
 							alt="User Image">
 					</div>
 					<div class="info">
-						<span class="name-coloring">My Name<br />
-							Administrator<br />
-							SMKN 2 Klaten</span>
+						<span class="name-coloring">ADMINISTRATOR<br />
+							ADMIN<br />
+							SMKN 2 KLATEN</span>
 					</div>
 				</div>
 
@@ -84,7 +84,7 @@
 				</nav>
 			</div>
 		</aside>
-    		<div class="content-wrapper">
+		<div class="content-wrapper">
 			<div class="content-header">
 				<div class="container-fluid">
 					<div class="row mb-2">

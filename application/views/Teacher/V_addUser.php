@@ -1,103 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="<?= base_url("assets/img/logo1.png") ?>" type="image/x-icon">
-    <title><?= $title ?></title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?= base_url("assets/fontawesome-free-5.11.2/css/all.min.css") ?>">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="<?= base_url("assets/bootstrap-4.4.1/bootstrap.min.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/sweetalert2-9.5.4/sweetalert2.min.css") ?>">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="<?= base_url("assets/mdb-free-4.11.0/mdb.min.css") ?>">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="<?= base_url("assets/adminlte-3.0.1/adminlte.min.css") ?>">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="<?= base_url("assets/wasija-1.0/wasija.css") ?>">
-    <!-- Ionicons -->
-	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-</head>
-<body>
-    <main>
-    	<div class="container-fluid">
-    		<div class="row">
-    			<div class="col-md-4"></div>
-    			<div class="col-md-4 login-box z-depth-5 rounded mb-50">
-    				<div class="px-4 py-4">
-    					<center><a href="#AboutWASIJA" id="btnMdlAbout" class="view zoom"><img class="front-logo" src="<?= base_url("assets/img/logo2.png") ?>"></a></center>
-                        <form autocomplete="off" class="form-horizontal" action="<?= base_url('Teacher/saveAccount');?>" method="post">
-                            <span style="font-size: 12px; color: red;">(*) Masukkan No Induk tanpa titik (.)<br />
-                            (*) No Induk dipakai untuk Username <br />
-                            (*) Minimal Password 8 character</span>
-                            <div class="md-form">
-                                <i class="fas fa-user prefix"></i>
-                                <input class="form-control" type="number" name="username" placeholder="1670379" id="username" required>
-                                <label for="username">No. Induk</label>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+			<a href="<?= base_url('Teacher') ?>" class="brand-link">
+				<div class="text-center">
+					<img src="<?= base_url('assets/img/not-logo1.png') ?>" alt="WASIJA Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+					<span class="brand-text font-bold">WASIJA</span>
+				</div>
+			</a>
+			<div class="sidebar">
+				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+					<div class="image">
+						<img src="<?= base_url('assets/user2-160x160.jpg') ?>" style="width:80px; height:80px" class="img-circle elevation-2"
+							alt="User Image">
+					</div>
+					<div class="info">
+						<span class="name-coloring">ADMINISTRATOR<br />
+							ADMIN<br />
+							SMKN 2 KLATEN</span>
+					</div>
+				</div>
+
+				<nav class="mt-2">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+						<li class="nav-header">MENU</li>
+						<li class="nav-item has-treeview">
+							<a href="<?= base_url('Teacher/DataAlat')?>" class="nav-link">
+								<i class="nav-icon fas fa-wrench"></i>
+								<p>
+									Data Barang
+									<i class="right fas fa-angle-left"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview" style="display: none;">
+								<li class="nav-item">
+									<a href="<?= base_url('Teacher/InsertAlat')?>" class="nav-link">
+										<i class="far fa-circle nav-icon"></i>
+										<p>Insert Barang</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="<?= base_url('Teacher/BarangDatang')?>" class="nav-link">
+										<i class="far fa-circle nav-icon"></i>
+										<p>Barang Datang</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="<?= base_url('Teacher/BarangHabisPakai')?>" class="nav-link">
+										<i class="far fa-circle nav-icon"></i>
+										<p>Barang Habis Pakai</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="<?= base_url('Teacher/InventarisBarang')?>" class="nav-link">
+										<i class="far fa-circle nav-icon"></i>
+										<p>Inventaris Barang</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="<?= base_url('Teacher/InventarisRuangan')?>" class="nav-link">
+										<i class="far fa-circle nav-icon"></i>
+										<p>Inventaris Ruangan</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url('Teacher/DataPeminjaman')?>" class="nav-link">
+								<i class="nav-icon ion ion-stats-bars"></i>
+								<p>
+									Data Peminjaman
+									<span class="right badge badge-danger">New</span>
+								</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url('Teacher/DataSiswa')?>" class="nav-link">
+								<i class="nav-icon fas fa-user"></i>
+								<p>
+									Account
+									<span class="right badge badge-danger">New</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="content-wrapper">
+			<div class="content-header">
+				<div class="container-fluid">
+					<div class="row mb-2">
+						<div class="col-sm-6">
+							<h1 class="m-0 text-dark">Account</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12">
+                            <div class="card card-outline card-dark">
+                                <div class="card-header">
+                                    <h3 class="card-title">Add Account</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form autocomplete="off" class="form-horizontal" action="<?= base_url('Start_With/saveAccount');?>" method="post">
+                                    <span style="font-size: 12px; color: red;">(*) Masukkan No Induk tanpa titik (.)<br />
+                                    (*) No Induk dipakai untuk Username <br />
+                                    (*) Minimal Password 8 character</span>
+                                    <div class="md-form">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input class="form-control" type="number" name="username" placeholder="1670379" id="username" required>
+                                        <label for="username">No. Induk</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-font prefix"></i>
+                                        <input class="form-control" type="text" name="nama" placeholder="ALBERT EINSTEIN" id="nama" style="text-transform:uppercase"required>
+                                        <label for="nama">Nama Lengkap</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-building prefix"></i>
+                                        <input class="form-control" type="text" name="kelas" placeholder="10 SIJA A" id="kelas" style="text-transform:uppercase"required>
+                                        <label for="kelas">Kelas</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-at prefix"></i>
+                                        <input class="form-control" type="email" name="email" placeholder="yourname@mail.com" id="email" style="text-transform:lowercase"required>
+                                        <label for="email">E-mail</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input class="form-control" type="password" name="password_register" id="password_register" required>
+                                        <label for="password_register">Password</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i id="addicon" class="fas fa-times prefix" style="color: red"></i>
+                                        <input class="form-control" type="password" name="password_confirm" id="password_confirm" required>
+                                        <label for="password_confirm">Confirm Password</label>
+                                        <a href="#ShowPassword" onclick="showPassword()">Show Password</a> <br />
+                                    </div>
+                                    <br/>
+                                    <center>
+                                        <input type="hidden" name="status_code" value="1">
+                                        <button class="btn btn-danger btn-sm waves-effect" onclick="window.history.go(-1)"><i class="fas fa-times mr-1"></i>&nbsp;Cancel</button>
+                                        <button id="btn_submit_register"class="btn btn-dark btn-sm waves-effect" type="submit" disabled><i class="fas fa-sign-in-alt mr-1"></i>&nbsp;Register</button><br />
+                                    </center>
+                                </form>
+                                </div>
                             </div>
-                            <div class="md-form">
-                                <i class="fas fa-font prefix"></i>
-                                <input class="form-control" type="text" name="nama" placeholder="ALBERT EINSTEIN" id="nama" style="text-transform:uppercase"required>
-                                <label for="nama">Nama Lengkap</label>
-                            </div>
-                            <div class="md-form">
-                                <i class="fas fa-building prefix"></i>
-                                <input class="form-control" type="text" name="kelas" placeholder="10 SIJA A" id="kelas" style="text-transform:uppercase"required>
-                                <label for="kelas">Kelas</label>
-                            </div>
-                            <div class="md-form">
-                                <i class="fas fa-at prefix"></i>
-                                <input class="form-control" type="email" name="email" placeholder="yourname@mail.com" id="email" style="text-transform:lowercase"required>
-                                <label for="email">E-mail</label>
-                            </div>
-                            <div class="md-form">
-                                <i class="fas fa-at prefix"></i>
-                                <input class="form-control" type="radio" name="kode" value="1" style="text-transform:lowercase"required>Admin
-                                <input class="form-control" type="radio" name="kode" value="2" style="text-transform:lowercase"required>Guru
-                                <input class="form-control" type="radio" name="kode" value="3" style="text-transform:lowercase"required>Siswa
-                                <label for="kode">Status</label>
-                            </div>
-                            <div class="md-form">
-                                <i class="fas fa-key prefix"></i>
-                                <input class="form-control" type="password" name="password_register" id="password_register" required>
-                                <label for="password_register">Password</label>
-                            </div>
-                            <div class="md-form">
-                                <i id="addicon" class="fas fa-times prefix" style="color: red"></i>
-                                <input class="form-control" type="password" name="password_confirm" id="password_confirm" required>
-                                <label for="password_confirm">Confirm Password</label>
-                                <a href="#ShowPassword" onclick="showPassword()">Show Password</a> <br />
-                            </div>
-                            <br/>
-                            <center>
-                                <button class="btn btn-danger btn-sm waves-effect" onclick="window.history.go(-1)"><i class="fas fa-times mr-1"></i>&nbsp;Cancel</button>
-                                <button id="btn_submit_register"class="btn btn-dark btn-sm waves-effect" type="submit" disabled><i class="fas fa-sign-in-alt mr-1"></i>&nbsp;Submit</button><br />
-                            </center>
-                        </form>
-    				</div>
-    			</div>
-    			<div class="col-md-4"></div>
-    		</div>
-    	</div>
-    </main>
-    <!-- JQuery -->
-    <script type="text/javascript" src="<?= base_url("assets/jquery-3.4.1/jquery.min.js") ?>"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="<?= base_url("assets/bootstrap-4.4.1/bootstrap.min.js") ?>"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="<?= base_url("assets/mdb-free-4.11.0/mdb.min.js") ?>"></script>
-    <!-- AdminLTE App -->
-    <script type="text/javascript" src="<?= base_url("assets/adminlte-3.0.1/adminlte.min.js") ?>"></script>
-    <!-- Sweet Alert -->
-    <script type="text/javascript" src="<?= base_url("assets/sweetalert2-9.5.4/sweetalert2.min.js") ?>"></script>
-    <!-- My JS -->
-    <script type="text/javascript" src="<?= base_url("assets/wasija-1.0/wasija.js") ?>"></script>
-    <script type="text/javascript">
-        $(function () { $('#username').focus(); })
-    </script>
-</body>
-</html>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
