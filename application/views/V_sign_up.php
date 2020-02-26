@@ -67,8 +67,9 @@
                             </div>
                             <br/>
                             <center>
+				<input type="hidden" name="status_code" value="0">
                                 <button class="btn btn-danger btn-sm waves-effect" onclick="window.history.go(-1)"><i class="fas fa-times mr-1"></i>&nbsp;Cancel</button>
-                                <button id="btn_submit_register"class="btn btn-dark btn-sm waves-effect" type="submit" disabled><i class="fas fa-sign-in-alt mr-1"></i>&nbsp;Submit</button><br />
+                                <button id="btn_submit_register"class="btn btn-dark btn-sm waves-effect" type="submit" disabled><i class="fas fa-sign-in-alt mr-1"></i>&nbsp;Register</button><br />
                             </center>
                         </form>
     				</div>
