@@ -118,9 +118,13 @@
                                         <label for="nama">Nama Lengkap</label>
                                     </div>
                                     <div class="md-form">
-                                        <i class="fas fa-building prefix"></i>
-                                        <input class="form-control" type="text" name="kelas" placeholder="10 SIJA A" id="kelas" style="text-transform:uppercase"required>
-                                        <label for="kelas">Kelas</label>
+					<select class="form-control" name="kode" id="kode-id">
+						<option value="" selected disabled>Jenis Akun</option>
+						<option value="2">02 - Guru</option>
+						<option value="3">03 - Siswa</option>
+					</select>
+                                    </div>
+                                    <div class="kls-siswa">
                                     </div>
                                     <div class="md-form">
                                         <i class="fas fa-at prefix"></i>
