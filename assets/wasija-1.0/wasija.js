@@ -328,3 +328,18 @@ $('#btnABStudent').click(function () {
             </div>
         </div>`).modal('show');
 });
+
+$('#kode-id').on('change', function() {
+    var kode = this.value;
+    if (kode == '3') {
+    	$('.kls-siswa').html(`
+    		<div class="md-form">
+    			<i class="fas fa-building prefix"></i>
+    			<input class="form-control" type="text" name="kelas" id="kelas" style="text-transform:uppercase"required>
+    			<label for="kelas">Kelas</label>
+    		</div>
+        `);
+    } else {
+        $('.kls-siswa').html('');
+    }
+});
