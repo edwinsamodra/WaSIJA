@@ -6,11 +6,13 @@
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">Data Siswa</h1>
                 </div>
+				<div class="col-sm-6">
+                    <a type="button" href="<?php echo base_url('Teacher/Sign_Up') ?>" class="btn fa fa-2x float-right fa-plus"></a>
+                </div>
             </div>
         </div>
     </div>
     	<div class="container-fluid">
-            <a type="button" href="<?php echo base_url('Teacher/Sign_Up') ?>" class="btn fa fa-2x fa-plus" valign="right"></a>
     		<div class="row">
     			<div class="col-lg-12">
     				<table id="tableStudent" class="display datatable table table-hover">
