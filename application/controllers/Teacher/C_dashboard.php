@@ -6,6 +6,8 @@ class C_dashboard extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->library('session');
+		$this->load->library('upload');
+		$this->load->helper('form');
 		$this->load->model('M_home');
 		$this->load->model('Teacher/M_teacher');
 		date_default_timezone_set('Asia/Jakarta');
