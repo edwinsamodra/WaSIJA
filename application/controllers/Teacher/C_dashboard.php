@@ -55,6 +55,60 @@ class C_dashboard extends CI_Controller {
 		}
 	}
 
+	public function ImportExcel()
+	{
+		require_once 'C:\xampp\htdocs\WASIJA\assets\PHPExcel-1.8\PHPExcel.php';
+
+		$user_id = $this->session->userid;
+		$fileName 					= $_FILES['item']['name'] .'-'. time();
+		$config['upload_path']		= 'application/cache/';
+		$config['allowed_types']	= '*';
+		$config['max_size'] 	 	= '8096';
+		$config['overwrite'] 		= true;
+		$config['file_name'] 		= $fileName;
+
+		$this->upload->initialize($config);
+
+		if($this->upload->do_upload('item')) {
+			$media			= $this->upload->data();
+			$inputFileName 	= 'application/cache/'.$media['file_name'];
+			chmod('./' . $inputFileName, 0777);
+            try {
+            	$inputFileType  = PHPExcel_IOFactory::identify($inputFileName);
+            	$objReader      = PHPExcel_IOFactory::createReader($inputFileType);
+				$objPHPExcel    = $objReader->load($inputFileName);
+            } catch(Exception $e) {
+            	die('Error loading file "'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
+			}
+			$sheet          = $objPHPExcel->getSheet(0);
+            $highestRow     = $sheet->getHighestRow();
+
+			for ($row = 2; $row <= $highestRow; $row++) {
+				$rowData = $sheet->rangeToArray('B' . $row . ':' . 'L' . $row, NULL, FALSE, TRUE);
+				$value = array(
+					'dibuat_pada'		=> date("Y-m-d H:i:s"),
+					'terakhir_update'	=> date("Y-m-d H:i:s"),
+					'kode_barang'		=> (empty($rowData[0][0]) ? null : $rowData[0][0]) ,
+					'nama_barang'		=> (empty($rowData[0][1]) ? null : $rowData[0][1]) ,
+					'spesifikasi'		=> (empty($rowData[0][2]) ? null : $rowData[0][2]) ,
+					'qty'				=> (empty($rowData[0][3]) ? null : $rowData[0][3]) ,
+					'harga'				=> (empty($rowData[0][4]) ? null : $rowData[0][4]) ,
+					'ket'				=> (empty($rowData[0][5]) ? null : $rowData[0][5]) ,
+					'sumber_barang'		=> (empty($rowData[0][6]) ? null : $rowData[0][6]) ,
+					'sumber_dana'		=> (empty($rowData[0][7]) ? null : $rowData[0][7]) ,
+					'kondisi'			=> (empty($rowData[0][8]) ? null : $rowData[0][8]) ,
+					'ruang'				=> (empty($rowData[0][9]) ? null : $rowData[0][9]) ,
+					'jenis'				=> (empty($rowData[0][10]) ? null : $rowData[0][10]) ,
+				);
+				$this->db->insert('tdata_barang', $value);
+			}
+		} else {
+			echo '<pre>Error : <br>';print_r($this->upload->display_errors());
+		}
+		unlink($inputFileName);
+		redirect(base_url('Teacher/InsertAlat'));
+	}
+
 	public function addBarang()
 	{
 		$tgl_beli	= $this->input->post('tanggal_pembelian');

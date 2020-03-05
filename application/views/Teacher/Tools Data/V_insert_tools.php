@@ -173,16 +173,18 @@
                                             <div class="row">
                                                 <div class="col-lg-1"></div>
                                                 <div class="col-lg-10">
-                                                    <form action="" method="post" role="form">
+                                                    <form method="post" enctype="multipart/form-data" class="form-horizontal" action="<?= base_url('Teacher/ImportExcel'); ?>">
+							<?= form_open_multipart(base_url('Teacher/ImportExcel'));?>
                                                         <label for="">Import (.xlsx)</label>
                                                         <div class="input-group mb-2">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text"><i class="fa fa-file"></i></span>
                                                             </div>
-                                                            <input type="file" name="" required class="form-control"
+                                                            <input type="file" name="item" required class="form-control"
                                                                 placeholder="file (.xlsx)">
                                                         </div>
                                                         <center><button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i>&nbsp; Import</button></center>
+							<?= form_close();?>
                                                     </form>
                                                 </div>
                                                 <div class="col-lg-1"></div>
