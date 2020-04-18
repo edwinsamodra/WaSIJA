@@ -9,13 +9,14 @@ WASIJA adalah aplikasi yang berfungsi untuk me-<i>manage</i> semua data barang y
 
 ### How to Use ?
 1. <i>Clone</i> terlebih dahulu dengan aplikasi Git.
-2. Lalu untuk menyelaraskan database, silahkan melakukan <i>import</i> ke database kalian menggunakan file ```script-database.sql```. Setelah itu untuk autentikasi pada MySQL silahkan mengecheck pada ```WASIJA/application/config/database.php``` gunakan username dan password yang ada.
-3. 
+2. Pastikan folder ```WASIJA``` terletak di dalam folder ```htdocs``` secara langsung.
+3. Lalu untuk menyelaraskan database, silahkan melakukan <i>import</i> ke database kalian menggunakan file ```script-database.sql```. Setelah itu untuk autentikasi pada MySQL silahkan mengecheck pada ```WASIJA/application/config/database.php``` gunakan username dan password yang ada.
+4. Buka ```localhost/WASIJA/``` Keajaiban dimulai.
 
 ### Bugs
 Kami akan menjabarkan beberapa bugs yang masih ada di aplikasi ini :
 1. Peminjaman alat untuk siswa
-2. 
+2. Design dan Animasi masih belum maksimal.
 
 ### License
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
